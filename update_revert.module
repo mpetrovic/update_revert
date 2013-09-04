@@ -1,0 +1,20 @@
+<?php
+
+function update_revert_batch_alter(&$batch) {
+  dpm($batch);
+  error_log(print_r($batch,1));
+
+  if (strpos($batch['url'], 'update.php') !== FALSE) {
+    $batch['sets'][0]['operations'][] = array(
+      'update_revert_revert_selected',
+      array()
+    );
+    $batch['sets'][0]['count']++;
+    $batch['sets'][0]['total']++;
+  }
+}
+
+function update_revert_revert_selected() {
+  dpm('success!');
+  return t('Success!');
+}

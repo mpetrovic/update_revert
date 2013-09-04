@@ -1,0 +1,5 @@
+<?php
+
+function update_revert_update_7001() {
+  $i = 5;
+}

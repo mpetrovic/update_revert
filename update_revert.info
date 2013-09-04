@@ -1,0 +1,3 @@
+name = "Update Revert"
+description = "Reverts features and ctools exportables every time updates are run."
+core = 7.x
